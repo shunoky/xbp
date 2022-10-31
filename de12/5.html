@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    
+    <title>第4回</title>
+    <link rel="styleseet" href="./css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <h1>ゲームの作成</h1><br>
+    <div><font size=5>ゲームの説明</font><br>
+        僕たちの班で案を出しているときの話し合いでは、小さいころにやっていたじゃんけんのような物をコンピュータでやるということでした。<br>
+        その中から習ったことを実践できるものを考えた時に、やろうとしたのが七五三というゲームです。<br>
+        七五三については<a href="https://www.boardgamepark.com/entry/how_to_win_nim">親子ボードゲームで楽しく遊ぶ</a><br>
+        しかし、習った内容ではできないと思いブラックジャックのような運を試すような「運ゲー」にすることにしました。<br>
+        <br>
+        <font size="5">ゲームのコード</font> <br>
+        <pre><code>
+            ame=input("名前を教えて下さーい")
+print(name,"さんようこそ！")
+print("このゲームはあなたの運or判断力が試されるゲームです。")
+print("ルールは簡単で値を超えないようにしてください。数を足したければ「yes」そうでなければ「no」を押してください")
+print("「no」を押した場合それがあなたのスコアになります。")
+
+print("ゲームスタート")
+
+import random
+from re import I
+from tkinter import Y
+Counter=0
+
+print("21を超えないように限界まで挑戦してください。")
+print("現在の数字は0です。")
+while Counter<=21:
+    a=random.randint(1,5)
+    QUESTION=input("まだ足しますか？")
+    if QUESTION=="yes":
+        Counter=Counter+a
+        print("現在の合計は",Counter,"です。")
+    elif Counter==21:
+        print("おめでとうございます！21ピッタリです！")
+        break
+    elif QUESTION=="no":
+        print("ハイスコアは",Counter,"です。")
+        break
+
+else:
+     print("21を超えました。失敗です")
+        </code></pre>
+        <br>
+        <font size="5">ゲームの様子</font><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Zg2ZW5tcLkg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+
+    </div>
+    </body>
+</html>
+
