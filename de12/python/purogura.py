@@ -1,4 +1,4 @@
-#歌詞の習得テキスト化
+歌詞の習得テキスト化
 
 import requests
 
@@ -20,7 +20,7 @@ def main():
 
     # URL の指定
 
-    url = "https://utaten.com/" +str(band) + "/"+str(song)
+    url = "https://utaten.com/lyric/" +str(band) + "/"+str(song)
 
     # ページの取得
 
@@ -95,4 +95,3 @@ def main():
 if __name__ == '__main__':
 
     main()
-    
